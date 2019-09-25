@@ -1,0 +1,49 @@
+@import "components/hero";
+@import "components/cta";
+@import "components/two-column";
+@import "components/favourites";
+
+@import "shared/header";
+// @import "pages/";
+
+// Avoid writing CSS in this file
+
+.app-e--full-height {
+  height: 100%;
+}
+
+.content {
+  padding: 3rem 0;
+}
+
+.underline--primary {
+  span {
+    background-image: linear-gradient(transparent calc(99% - 2px), $primary-color 2px);
+    background-size: 0;
+    background-repeat: no-repeat;
+    display: inline;
+    transition: 0.5s ease;
+  }
+
+  &:hover {
+    span {
+      background-size: 100%;
+    }
+  }
+}
+
+.underline--secondary {
+  span {
+    background-image: linear-gradient(transparent calc(99% - 2px), $secondary-color 2px);
+    background-size: 0;
+    background-repeat: no-repeat;
+    display: inline;
+    transition: 0.5s ease;
+  }
+
+  &:hover {
+    span {
+      background-size: 100%;
+    }
+  }
+}

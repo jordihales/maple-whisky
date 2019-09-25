@@ -1,0 +1,8 @@
+%section.hero.align-center-middle
+  .hero__image{ style: @page.content(:hero_image).present? ? "background-image: url(#{main_app.url_for(@page.content(:hero_image).variant(resize: '1920x1080'))})" : nil }
+    .grid-container.app-e--full-height
+      .grid-x.app-e--full-height.align-center-middle
+        .cell.medium-10.large-8.text-center
+          .hero__title.text-center
+            != @page.content(:hero_title)
+  = link_to (image_pack_tag "scroll-down-arrow.svg", width: 50), "#main", class: "scroll-arrow show-for-large"

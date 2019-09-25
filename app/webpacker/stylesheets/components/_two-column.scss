@@ -1,0 +1,23 @@
+.two-column {
+  &__title {
+    color: $primary-color;
+    margin-bottom: 2rem;
+  }
+
+  &__image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 480px;
+    position: relative;
+  }
+
+  &__text {
+    color: $secondary-color;
+    padding-right: 3rem;
+  }
+}
+
+.left {
+  padding: 0 3rem;
+}

@@ -1,0 +1,10 @@
+- pages = Spina::Navigation.find_by(name: 'main').pages.live.sorted
+
+.off-canvas.position-right#menu(data-off-canvas)
+  %button.close-button(type='button' aria-label='Close menu' data-close)
+    %span(aria-hidden='true') &times;
+  %nav.nav
+    %ul.menu.vertical
+      - pages.each do |p|
+        %li
+          = link_to p.title, p.materialized_path, class: 'h1'

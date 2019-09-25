@@ -1,0 +1,15 @@
+!!!
+%html{ lang: 'en' }
+  %head
+    %meta{ charset: 'utf-8' }
+    %meta{ name: 'viewport', content: 'width=device-width, initial-scale=1.0' }
+    = csrf_meta_tag
+    = canonical_tag
+    %title Maple & Whisky
+    %meta{ name: 'description', content: 'Maple & Whisky Candle Co' }
+    = stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'true'
+    = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true
+
+  %body.no-js
+    %main{ role: 'main' }
+      = yield

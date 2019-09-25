@@ -1,0 +1,10 @@
+%section.two-column
+  .grid-x.align-center-middle
+    .cell.large-6
+      .left
+        %h1.two-column__title.underline--primary
+          %span About Us
+        .two-column__text
+          != @page.content(:about_us)
+    .cell.large-6
+      .two-column__image{ style: @page.content(:about_image).present? ? "background-image: url(#{main_app.url_for(@page.content(:about_image).variant(resize: '1920x1080'))})" : nil }

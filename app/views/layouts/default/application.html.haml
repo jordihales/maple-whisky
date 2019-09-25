@@ -1,0 +1,17 @@
+!!!
+%html{ lang: 'en' }
+  %head
+    %meta{ charset: 'utf-8' }
+    %meta{ name: 'viewport', content: 'width=device-width, initial-scale=1.0' }
+    = csrf_meta_tag
+    = canonical_tag
+    %title #{current_account.name} | #{content_for(:page_title)}
+    %meta{ name: 'description', content: content_for(:page_description) }
+    = stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'true'
+    = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true
+  %body.no-js.off-canvas-content(data-off-canvas-content){ class: yield(:body_class) }
+    = render 'default/shared/header'
+    = render 'default/shared/navigation'
+    %main
+      = yield
+    -# = render 'default/shared/footer'
