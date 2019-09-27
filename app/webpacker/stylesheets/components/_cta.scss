@@ -4,6 +4,11 @@
 
   &__text a {
     color: $white;
+    font-size: 2rem;
+
+    @include breakpoint(small only) {
+      font-size: 1.5rem;
+    }
 
     &:hover {
       color: darken($white, 5%);

@@ -419,7 +419,8 @@ $meter-fill-bad: $alert-color;
 // --------------
 
 $offcanvas-sizes: (
-  small: 30vw
+  small: 300px,
+  medium: 30vw
 );
 $offcanvas-vertical-sizes: (
   small: 250px

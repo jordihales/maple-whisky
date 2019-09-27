@@ -1,6 +1,10 @@
 .hero {
   height: 600px;
 
+  @include breakpoint(small only) {
+    height: 480px;
+  }
+
   &__image {
     background-position: center;
     background-repeat: no-repeat;
@@ -26,11 +30,21 @@
     z-index: 1;
 
     h1 {
-      font-size: 4rem;
+      font-size: 2.5rem;
     }
 
     h3 {
-      font-size: 2.5rem;
+      font-size: 1.5rem;
+    }
+
+    @include breakpoint(medium) {
+      h1 {
+        font-size: 4rem;
+      }
+
+      h3 {
+        font-size: 2.5rem;
+      }
     }
   }
 }

@@ -3,7 +3,10 @@
 
   &__title {
     color: $primary-color;
-    margin-bottom: 3rem;
+
+    @include breakpoint(large) {
+      margin-bottom: 3rem;
+    }
   }
 
   &-slider {
@@ -14,7 +17,11 @@
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
-      height: 500px;
+      height: 400px;
+
+      @include breakpoint(large) {
+        height: 500px;
+      }
 
       &:hover:before {
         opacity: 0.85;
