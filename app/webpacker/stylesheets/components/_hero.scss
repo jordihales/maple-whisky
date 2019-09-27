@@ -1,18 +1,18 @@
 .hero {
-  height: 100vh;
+  height: 600px;
 
   &__image {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+    height: 100%;
     position: relative;
     z-index: 0;
 
     &:before {
       background-color: rgba($black, 0.4);
       content: "";
-      height: 100vh;
+      height: 100%;
       left: 0;
       position: absolute;
       top: 0;

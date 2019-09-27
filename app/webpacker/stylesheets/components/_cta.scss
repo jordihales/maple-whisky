@@ -2,7 +2,11 @@
   background-color: $primary-color;
   height: 120px;
 
-  &__text {
+  &__text a {
     color: $white;
+
+    &:hover {
+      color: darken($white, 5%);
+    }
   }
 }

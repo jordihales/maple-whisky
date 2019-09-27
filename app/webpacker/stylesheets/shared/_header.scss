@@ -42,3 +42,16 @@
     margin-top: 0;
   }
 }
+
+.menu-icon {
+  background-image: url("images/menu-icon.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 30px;
+  width: 30px;
+
+  &::after {
+    display: none;
+  }
+}

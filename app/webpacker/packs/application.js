@@ -12,6 +12,7 @@ import "images/scroll-down-arrow.svg";
 import "images/arrow.svg";
 import "images/in.svg";
 import "images/logo.svg";
+import "images/menu-icon.svg";
 
 Rails.start();
 Turbolinks.start();
