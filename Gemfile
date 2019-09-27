@@ -12,6 +12,8 @@ gem 'simple_form'
 gem 'invisible_captcha'
 gem 'spina', github: 'SpinaCMS/spina', branch: 'master'
 gem 'aws-sdk-s3', require: false
+gem 'ruby-instagram-scraper', github: 'brucek/ruby-instagram-scraper'
+
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

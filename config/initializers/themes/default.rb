@@ -9,6 +9,9 @@
     { name:'hero_image', title: 'Hero Image', partable_type:  'Spina::Image' },
     { name:'about_image', title: 'About Image', partable_type:  'Spina::Image' },
     { name:'about_us', title: 'About Us', partable_type:  'Spina::Text' },
+    { name:'favourites', title: 'Favourites', partable_type:  'Spina::Structure' },
+    { name:'testimonials', title: 'Testimonials', partable_type:  'Spina::Structure' },
+    { name:'testimonials_image', title: 'Testimonials Image', partable_type:  'Spina::Image' },
 
 
   ]
@@ -16,7 +19,7 @@
   theme.view_templates = [{
     name:       'homepage',
     title:      'Homepage',
-    page_parts: %w[hero_title hero_image about_image about_us text]
+    page_parts: %w[hero_title hero_image about_image about_us favourites testimonials_image testimonials text]
   }, {
     name: 'show',
     title:        'Default',
@@ -40,5 +43,22 @@
     label: 'Main navigation',
     auto_add_pages: true
   }]
+
+  theme.structures = [
+    {
+      name: 'testimonials',
+      structure_parts: [
+        { name: 'author', title: 'Author', partable_type: 'Spina::Line' },
+        { name: 'quote', title: 'Quote', partable_type: 'Spina::Text' }
+      ]
+    },{
+      name: 'favourites',
+      structure_parts: [
+        { name: 'name', title: 'Name', partable_type: 'Spina::Line' },
+        { name: 'description', title: 'Description', partable_type: 'Spina::Text' },
+        { name: 'image', title: 'Image', partable_type: 'Spina::Image' }
+      ]
+    }
+  ]
 
 end

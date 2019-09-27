@@ -3,5 +3,107 @@
 
   &__title {
     color: $primary-color;
+    margin-bottom: 3rem;
+  }
+
+  &-slider {
+    padding: 1rem;
+
+    &__item {
+      background-color: $white;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 500px;
+
+      &:hover:before {
+        opacity: 0.85;
+        transition: 0.25s ease;
+      }
+
+      @include breakpoint(large) {
+        width: calc(100% - 1rem) !important;
+      }
+
+      &:before {
+        background-color: $primary-color;
+        content: "";
+        height: 100%;
+        left: 0;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        width: calc(100% - 1rem) !important;
+      }
+    }
+
+    &__name {
+      border-bottom: 2px solid $white;
+      margin-bottom: 1.5rem;
+    }
+
+    &__description {
+      padding: 0 7rem;
+    }
+
+    &__text {
+      align-items: center;
+      color: $white;
+      display: flex;
+      flex-direction: column;
+      font-size: 2.5rem;
+      height: 100%;
+      justify-content: center;
+      opacity: 0;
+      position: relative;
+      transition: 0.25s ease;
+      z-index: 1;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    .slick-list {
+      @include breakpoint(large) {
+        padding: 0 15%;
+      }
+    }
+
+    .slick-slide {
+      filter: grayscale(0.85);
+      opacity: 0.25;
+      transition: 0.25s ease;
+
+      &.slick-active {
+        filter: grayscale(0);
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.slick-slider {
+  padding-bottom: 2rem;
+
+  .slick-arrow {
+    background-image: url("images/arrow.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 20px;
+    bottom: 0;
+    font-size: 0;
+    height: 20px;
+    position: absolute;
+    width: 20px;
+
+    &.slick-next {
+      left: 36px;
+    }
+
+    &.slick-prev {
+      left: 0;
+      transform: rotate(-180deg);
+    }
   }
 }

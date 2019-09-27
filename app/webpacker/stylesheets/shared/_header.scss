@@ -1,13 +1,44 @@
 .header {
   background-color: transparent;
-  height: 50px;
-  padding: 2rem 0;
+  left: 0;
+  padding: 1.25rem 0;
   position: fixed;
   top: 0;
+  transition: 0.25s ease;
   width: 100%;
   z-index: 10;
+
+  &.is-active {
+    background-color: $primary-color;
+  }
 }
 
 .link {
   color: $white;
+  font-size: 1.25rem;
+}
+
+.off-canvas {
+  padding: 4rem 2rem 2rem;
+  text-align: center;
+
+  .nav {
+    margin: 2rem 0;
+
+    .menu li a {
+      font-size: 1.25rem;
+    }
+  }
+
+  .nav__logo {
+    &__link {
+      img {
+        width: 200px;
+      }
+    }
+  }
+
+  .nav__links-social {
+    margin-top: 0;
+  }
 }

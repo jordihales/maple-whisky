@@ -1,0 +1,14 @@
+- instagram = RubyInstagramScraper.get_user_media_nodes("mapleandwhiskycandleco") rescue nil
+
+- if instagram.present?
+  %section.instagram(data-section='instagram')
+    .content
+      .grid-container
+        %h1.two-column__title.underline--primary.text-center
+          %span Follow Us
+        .subtitle #{link_to '@mapleandwhiskycandleco', current_account.instagram}
+        .grid-x.grid-padding-x.grid-padding-y.align-center.small-up-2.medium-up-3.large-up-5
+          - instagram.first(5).each do |i|
+            .cell
+              = link_to "https://www.instagram.com/p/#{i['node']['shortcode']}/", style: "background-image: url(#{i['node']['display_url']})", target: :blank, class: "instagram__image background-image" do
+                = image_pack_tag 'in.svg', class: 'instagram__image__icon'

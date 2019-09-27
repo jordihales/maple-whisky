@@ -1,0 +1,14 @@
+%footer.footer(data-module='header')
+  .grid-container
+    .grid-x.grid-padding-x.align-center-middle.small-up-3
+      .cell.text-left
+        .footer__link
+          Maple & Whisky
+      .cell.text-center
+        .footer__social
+          %ul.menu.horizontal.text-center
+            %li= link_to 'Facebook', current_account.facebook if current_account.facebook.present?
+            %li= link_to 'Twitter', current_account.twitter if current_account.twitter.present?
+            %li= link_to 'Instagram', current_account.instagram if current_account.instagram.present?
+      .cell.text-right
+        = link_to 'Contact', '#', class: 'footer__link'

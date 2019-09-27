@@ -20,6 +20,12 @@ GIT
       sass-rails
       turbolinks (~> 5)
 
+GIT
+  remote: https://github.com/brucek/ruby-instagram-scraper.git
+  revision: 083ecdb6ddd453e39bd4d90902531158dfb24b47
+  specs:
+    ruby-instagram-scraper (0.2.4)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -324,6 +330,7 @@ DEPENDENCIES
   pg
   puma
   rails (= 6.0.0.rc1)
+  ruby-instagram-scraper!
   simple_form
   spina!
   spring

@@ -1,10 +1,16 @@
 - pages = Spina::Navigation.find_by(name: 'main').pages.live.sorted
 
-.off-canvas.position-right#menu(data-off-canvas)
-  %button.close-button(type='button' aria-label='Close menu' data-close)
+%section.off-canvas.position-right#menu(data-off-canvas)
+  %button.close-button(aria-label="close menu" data-close)
     %span(aria-hidden='true') &times;
+  .nav__logo
+    = link_to (image_pack_tag 'logo.svg', width: 95), root_path, class: 'nav__logo__link'
   %nav.nav
     %ul.menu.vertical
       - pages.each do |p|
-        %li
-          = link_to p.title, p.materialized_path, class: 'h1'
+        %li= link_to p.title, p.materialized_path, class: 'header__link'
+
+  .nav__links-social
+    %ul.menu.horizontal.align-center
+      %li= link_to 'Facebook', current_account.facebook, class: 'nav__link'
+      %li= link_to 'Instagram', current_account.instagram, class: 'nav__link'

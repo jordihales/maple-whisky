@@ -1,7 +1,13 @@
 - content_for :page_title, @page.seo_title
 - content_for :page_description, @page.description
+- favourites = @page.content(:favourites).structure_items.sorted_by_structure
+- testimonials = @page.content(:testimonials).structure_items.sorted_by_structure
+
+
 
 = render partial: 'components/hero'
 = render partial: 'components/cta'
 = render partial: 'components/two-column'
-= render partial: 'components/favourites'
+= render partial: 'components/favourites', locals: { favourites: favourites }
+= render partial: 'components/testimonials', locals: { testimonials: testimonials }
+= render partial: 'components/instagram'

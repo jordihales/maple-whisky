@@ -2,8 +2,12 @@
 @import "components/cta";
 @import "components/two-column";
 @import "components/favourites";
+@import "components/testimonials";
+@import "components/instagram";
 
 @import "shared/header";
+@import "shared/footer";
+
 // @import "pages/";
 
 // Avoid writing CSS in this file
@@ -13,7 +17,7 @@
 }
 
 .content {
-  padding: 3rem 0;
+  padding: 4rem 0;
 }
 
 .underline--primary {

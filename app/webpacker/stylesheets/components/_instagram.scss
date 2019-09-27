@@ -1,0 +1,27 @@
+.instagram {
+  text-align: center;
+
+  &__image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    padding-top: 100%;
+    position: relative;
+    transition: 0.25s ease;
+
+    &:hover {
+      transform: scale(0.95);
+    }
+
+    &__icon {
+      position: absolute;
+      right: 1rem;
+      top: 1rem;
+    }
+  }
+}
+
+.subtitle {
+  margin-bottom: 1.5rem;
+}

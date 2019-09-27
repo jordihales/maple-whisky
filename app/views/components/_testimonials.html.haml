@@ -1,0 +1,14 @@
+%section.testimonials
+  .grid-x.align-center-middle
+    .cell.large-6
+      .two-column__image{ style: @page.content(:testimonials_image).present? ? "background-image: url(#{main_app.url_for(@page.content(:testimonials_image).variant(resize: '1920x1080'))})" : nil }
+    .cell.large-6
+      .testimonials__content
+        %h1.two-column__title.underline--primary.text-center
+          %span Reviews
+        %div(data-slick='testimonials')
+          - @page.content(:testimonials).structure_items.sorted_by_structure.each do |t|
+            .two-column__text
+              != t.content(:quote)
+              .testimonials__author
+                != t.content(:author)
