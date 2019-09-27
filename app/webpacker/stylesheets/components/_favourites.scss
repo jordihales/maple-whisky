@@ -40,7 +40,10 @@
         opacity: 0;
         position: absolute;
         top: 0;
-        width: calc(100% - 1rem) !important;
+
+        @include breakpoint(large) {
+          width: calc(100% - 1rem) !important;
+        }
       }
     }
 
