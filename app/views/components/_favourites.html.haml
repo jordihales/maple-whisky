@@ -10,6 +10,6 @@
             %div{ 'data-slick': 'favourites' }
               - favourites.each do |favourite|
                 .favourites-slider__item{ style: "background-image: url(#{main_app.url_for(favourite.content(:image).variant(resize: '1920x1080'))})" }
-                  .favourites-slider__text.show-for-medium
+                  .favourites-slider__text
                     .favourites-slider__name=  favourite.content(:name)
                     %h6.favourites-slider__description!=  favourite.content(:description)

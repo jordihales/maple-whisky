@@ -40,6 +40,7 @@
         opacity: 0;
         position: absolute;
         top: 0;
+        width: 100%;
 
         @include breakpoint(large) {
           width: calc(100% - 1rem) !important;
@@ -54,6 +55,14 @@
 
     &__description {
       padding: 0 7rem;
+
+      @include breakpoint(small only) {
+        padding: 0 1.5rem;
+      }
+
+      @include breakpoint(medium only) {
+        padding: 0 5rem;
+      }
     }
 
     &__text {
