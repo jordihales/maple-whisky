@@ -12,7 +12,9 @@
     { name:'favourites', title: 'Favourites', partable_type:  'Spina::Structure' },
     { name:'testimonials', title: 'Testimonials', partable_type:  'Spina::Structure' },
     { name:'testimonials_image', title: 'Testimonials Image', partable_type:  'Spina::Image' },
-    { name:'products', title: 'Products', partable_type:  'Spina::Structure' }
+    { name:'products', title: 'Products', partable_type:  'Spina::Structure' },
+    { name:'scents', title: 'Scents', partable_type:  'Spina::Structure' }
+
 
   ]
 
@@ -26,6 +28,11 @@
     description:  'A simple page',
     usage:        'Use for your content',
     page_parts:   %w[hero_title hero_image products]
+  }, {
+    name: 'scents',
+    title:        'Scents',
+    usage:        'Use for your content',
+    page_parts:   %w[hero_title hero_image scents]
   }]
 
   theme.custom_pages = [{
@@ -64,6 +71,13 @@
         { name: 'name', title: 'Name', partable_type: 'Spina::Line' },
         { name: 'description', title: 'Description', partable_type: 'Spina::Text' },
         { name: 'image', title: 'Image', partable_type: 'Spina::Image' }
+      ]
+    },{
+      name: 'scents',
+      structure_parts: [
+        { name: 'name', title: 'Name', partable_type: 'Spina::Line' },
+        { name: 'description', title: 'Description', partable_type: 'Spina::Text' },
+        { name: 'label', title: 'Image', partable_type: 'Spina::Image' }
       ]
     }
   ]

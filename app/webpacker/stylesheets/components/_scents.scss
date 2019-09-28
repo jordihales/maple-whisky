@@ -1,0 +1,31 @@
+.scents {
+  &__title {
+    color: $secondary-color;
+  }
+
+  &__label {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 10px;
+    height: 300px;
+    margin-bottom: 1.5rem;
+    transition: 0.25s ease;
+
+    &:hover {
+      transform: scale(0.95);
+    }
+  }
+
+  &__content {
+    padding: 2rem 0;
+  }
+
+  &__name {
+    color: $primary-color;
+  }
+
+  &__info {
+    color: $secondary-color;
+  }
+}

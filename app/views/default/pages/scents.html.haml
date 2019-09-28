@@ -1,0 +1,8 @@
+- content_for :page_title, @page.seo_title
+- content_for :page_description, @page.description
+- scents = @page.content(:scents).structure_items.sorted_by_structure
+
+
+= render partial: 'components/hero'
+= render partial: 'components/cta'
+= render partial: 'components/scents', locals: { scents: scents }
