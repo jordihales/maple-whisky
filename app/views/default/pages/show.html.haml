@@ -1,3 +1,8 @@
-%h1= current_page.title
-= content(:text).try(:html_safe)
+- content_for :page_title, @page.seo_title
+- content_for :page_description, @page.description
 
+= render partial: 'components/hero'
+= render partial: 'components/cta'
+- @page.content(:products).structure_items.sorted_by_structure.each do |products|
+  = render partial: 'components/products', locals: { title: products.content(:name), information: products.content(:information), image: products.content(:image) }
+= render partial: 'components/instagram'

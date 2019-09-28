@@ -4,6 +4,7 @@
 @import "components/favourites";
 @import "components/testimonials";
 @import "components/instagram";
+@import "components/products";
 
 @import "shared/header";
 @import "shared/footer";
@@ -42,6 +43,22 @@
 .underline--secondary {
   span {
     background-image: linear-gradient(transparent calc(99% - 2px), $secondary-color 2px);
+    background-size: 0;
+    background-repeat: no-repeat;
+    display: inline;
+    transition: 0.5s ease;
+  }
+
+  &:hover {
+    span {
+      background-size: 100%;
+    }
+  }
+}
+
+.underline--white {
+  span {
+    background-image: linear-gradient(transparent calc(99% - 2px), $white 2px);
     background-size: 0;
     background-repeat: no-repeat;
     display: inline;

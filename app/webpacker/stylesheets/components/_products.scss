@@ -1,0 +1,41 @@
+.products {
+  background-color: $white;
+
+  &:nth-of-type(odd) {
+    background-color: $secondary-color;
+
+    .products__content {
+      @include breakpoint(large) {
+        padding-left: 4rem;
+        padding-right: 1rem;
+      }
+    }
+
+    .products__info {
+      color: $white;
+    }
+
+    .products__title {
+      color: $white;
+    }
+
+    .app-cell__product--flip {
+      @include breakpoint(large) {
+        order: -1;
+      }
+    }
+  }
+
+  &__title {
+    color: $primary-color;
+    padding-bottom: 1.5rem;
+  }
+
+  &__info {
+    color: $secondary-color;
+  }
+
+  &__content {
+    padding: 0 2rem;
+  }
+}

@@ -12,7 +12,9 @@ import "images/scroll-down-arrow.svg";
 import "images/arrow.svg";
 import "images/in.svg";
 import "images/logo.svg";
+import "images/header-logo.svg";
 import "images/menu-icon.svg";
+import "images/favicon.png";
 
 Rails.start();
 Turbolinks.start();
@@ -45,7 +47,7 @@ $(document).on("turbolinks:load", function() {
   $("[data-slick='favourites']").slick({
     arrows: true,
     autoplay: true,
-    autoplaySpeed: 60000,
+    autoplaySpeed: 6000,
     slidesToShow: 1
   });
 });

@@ -1,8 +1,10 @@
 %header.header#js-header(data-module='header')
   .grid-container
-    .grid-x.grid-padding-x.align-middle.small-up-2
+    .grid-x.grid-padding-x.align-middle.small-up-3
       .cell.text-left
         = link_to 'Contact', '#', class: 'link'
+      .cell.text-center
+        = link_to (image_pack_tag 'header-logo.svg', width: 100), root_path, class: 'header__logo'
       .cell.text-right
         .header__action
           %button.menu-icon(type='button' data-toggle='menu')

@@ -1,0 +1,10 @@
+%section.products
+  .grid-x.align-center-middle.large-up-2
+    .cell.text-center.large-text-left
+      .products__content
+        %h1.products__title
+          %span= title
+        .products__info
+          != information
+    .cell.app-cell__product--flip
+      .two-column__image{ style: image.present? ? "background-image: url(#{main_app.url_for(image.variant(resize: '1920x1080'))})" : nil }
