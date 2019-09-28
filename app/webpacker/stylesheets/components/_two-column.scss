@@ -11,6 +11,10 @@
     height: 480px;
     position: relative;
 
+    @include breakpoint(small only) {
+      height: 380px;
+    }
+
     &:before {
       background-color: rgba($black, 0.2);
       content: "";

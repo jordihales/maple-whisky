@@ -2,8 +2,7 @@
   .grid-container
     .grid-x.grid-padding-x.align-center-middle.medium-up-3
       .cell.text-center.medium-text-left
-        .footer__link
-          Maple & Whisky
+        = link_to (image_pack_tag 'header-logo.svg', width: 80), root_path, class: 'footer__logo'
       .cell.text-center
         .footer__social
           %ul.menu.horizontal.text-center

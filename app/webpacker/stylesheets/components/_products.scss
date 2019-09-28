@@ -20,7 +20,7 @@
     }
 
     .app-cell__product--flip {
-      @include breakpoint(large) {
+      @include breakpoint(medium) {
         order: -1;
       }
     }
@@ -36,6 +36,6 @@
   }
 
   &__content {
-    padding: 0 2rem;
+    padding: 2rem;
   }
 }
