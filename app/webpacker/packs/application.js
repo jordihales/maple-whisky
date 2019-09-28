@@ -15,6 +15,7 @@ import "images/logo.svg";
 import "images/header-logo.svg";
 import "images/menu-icon.svg";
 import "images/favicon.png";
+import "images/facebook-cover.png";
 
 Rails.start();
 Turbolinks.start();

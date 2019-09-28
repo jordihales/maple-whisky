@@ -7,6 +7,7 @@
     = canonical_tag
     %title #{current_account.name} | #{content_for(:page_title)}
     %meta{ name: 'description', content: content_for(:page_description) }
+    %meta{ property: "og:image", content: "#{asset_pack_path('media/images/facebook-cover.png')}"}
     = stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'true'
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true
   %body.no-js.off-canvas-content(data-off-canvas-content){ class: yield(:body_class) }
