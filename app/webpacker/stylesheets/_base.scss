@@ -72,3 +72,28 @@
     }
   }
 }
+
+body {
+  cursor: none;
+}
+
+#main-cursor {
+  mix-blend-mode: difference;
+  pointer-events: none;
+  background: $white;
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50px;
+}
+
+#follow-cursor {
+  transition: all 0.1s ease, left 0.15s linear, top 0.15s linear;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border: solid white 2px;
+  border-radius: 50px;
+}
