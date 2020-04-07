@@ -1,6 +1,6 @@
 .two-column {
   background-color: $white;
-  
+
   &__title {
     color: $primary-color;
     margin-bottom: 2rem;
@@ -15,16 +15,6 @@
 
     @include breakpoint(small only) {
       height: 380px;
-    }
-
-    &:before {
-      background-color: rgba($black, 0.2);
-      content: "";
-      height: 100%;
-      left: 0;
-      position: absolute;
-      top: 0;
-      width: 100%;
     }
   }
 
