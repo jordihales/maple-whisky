@@ -1,4 +1,4 @@
-- pages = Spina::Navigation.find_by(name: 'main').pages.live.sorted
+- pages = Spina::Page.roots.in_menu.live.sorted
 
 %section.off-canvas.position-right#menu(data-off-canvas)
   %button.close-button(aria-label="close menu" data-close)
