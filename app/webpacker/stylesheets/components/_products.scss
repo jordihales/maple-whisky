@@ -7,7 +7,7 @@
     .products__content {
       @include breakpoint(large) {
         padding-left: 4rem;
-        padding-right: 1rem;
+        padding-right: 4rem;
       }
     }
 
@@ -37,5 +37,9 @@
 
   &__content {
     padding: 2rem;
+
+    @include breakpoint(large) {
+      padding: 0 4rem;
+    }
   }
 }
